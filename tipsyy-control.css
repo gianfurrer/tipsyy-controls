@@ -1,0 +1,150 @@
+sticky-bottom {
+  padding: 10px 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+video-wrapper:not(:fullscreen) {
+  display: block;
+  height: inherit;
+  max-height: inherit;
+  background: #000;
+  position: relative;
+  border-radius: inherit;
+  box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
+
+video-wrapper:fullscreen video {
+  height: 100%;
+}
+
+video-wrapper video {
+  display: block;
+  max-height: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+video-wrapper video, 
+video-wrapper video-controls {
+  width: 100%;
+}
+
+video-wrapper video-controls {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  height: 100%;
+  box-shadow: inset 0 -80px 80px 10px rgba(20,20,20,0.6);
+}
+
+video-controls > .left {
+  height: 30px;
+}
+
+video-controls > * {
+  margin-bottom: 0;
+  user-select: none;
+}
+
+video-controls button.material-icons,
+video-controls a.material-icons {
+  border: none;
+  color: #fff;
+  background: transparent;
+  padding: 10px;
+  display: inline-block;
+}
+
+video-controls button:hover,
+video-controls a:hover {
+  border-radius: 50px;
+  background: rgba(0,0,0,.8);
+  cursor: pointer;
+}
+
+video-controls button:active,
+video-controls a:active {
+  border-radius: 50px;
+  background: rgba(0,0,0,.6);
+  cursor: pointer;
+}
+
+video-controls .row {
+  margin-bottom: 5px;
+}
+
+video-controls .row > * > *:not(.dropdown-content) {
+  display: inline-block;
+}
+
+video-wrapper volume-wrapper:hover input,
+video-wrapper volume-wrapper:focus-within input {
+  display: inline; 
+  width: 70px;
+  padding: 3px 0;
+}
+
+video-controls volume-wrapper .range-field {
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+video-controls time-wrapper {
+  display: block;
+  vertical-align: top;
+  margin: 13px 3px 0;
+}
+
+volume-wrapper > * {
+  display: inline-block;
+}
+
+video-controls input[type=range] {
+  margin: 8px 3px;
+  border: none;
+  cursor: pointer;
+  height: 5px;
+}
+
+video-controls input[type=range]::-moz-range-thumb {
+  background-color: #fff;
+}
+
+video-controls input[type=range]::-ms-thumb {
+  background-color: #fff;
+}
+
+video-controls input[type=range]::-webkit-slider-thumb {
+  background-color: #fff;
+}
+
+
+video-controls .dropdown-content > li {
+  font-size: 14px;
+  color: #000;
+  display: block;
+  min-height: unset;
+  line-height: unset;
+  padding: 8px 10px;
+}
+
+video-controls .thumb {
+  display: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+  video-controls button.material-icons,
+  video-controls a.material-icons{
+    padding: 5px;
+  }
+  
+  video-controls time-wrapper {
+    font-size: 12px;
+    margin-top: 9px;
+  } 
+}
